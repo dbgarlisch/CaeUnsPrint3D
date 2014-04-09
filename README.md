@@ -1,20 +1,18 @@
-# caeplugin-AMF
-A Pointwise CAE plugin that exports a grid in the Additive Manufacturing File Format.
+# caeplugin-Print3D
+A Pointwise CAE plugin that exports a grid suitable for 3D printing.
 
-![AMF][AMFlogo]
+The exported grid is converted to a collection if inflated edges. That is, each unique grid edge is exported as a cylinder. The cylinders are saved to an STL file.
 
-Additive Manufacturing File Format (AMF) is an open standard for describing objects for additive manufacturing processes such as 3D printing. It is an XML-based format that describes the shape and composition of any 3D object to be fabricated on a 3D printer. Unlike the STL format, AMF has native support for color, materials, lattices, and constellations.
+Several solver attribute configuration settings are available to control export behavior.
 
-For more information see:
-* [AMF wiki][AMFwiki]
-* [AMF on wikipedia][AMFwikipedia]
+Due to the limitations of 3D printing, only coarse grids can be successfully printed.
 
 ## Building the Plugin
-To build the AMF plugin you must integrate this source code into your local PluginSDK installation by following these steps.
+To build the Print3D plugin you must integrate this source code into your local PluginSDK installation by following these steps.
 
 * Download and install the [Pointwise Plugin SDK][SDKdownload].
 * Configure and validate the SDK following the [SDK's instructions][SDKdocs].
-* Create an AMF plugin project using the mkplugin script: `mkplugin -uns -cpp AMF`
+* Create an Print3D plugin project using the mkplugin script: `mkplugin -uns -cpp Print3D`
 * Replace the project's generated files with the files from this repository.
 
 
@@ -35,8 +33,8 @@ INABILITY TO USE THESE SCRIPTS EVEN IF POINTWISE HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF THE FAULT OR NEGLIGENCE OF
 POINTWISE.
 
-[AMFlogo]: https://raw.github.com/dbgarlisch/CaeUnsAMF/master/AMF_icon.png  "AMF Logo"
-[AMFwiki]: http://amf.wikispaces.com/
-[AMFwikipedia]: http://en.wikipedia.org/wiki/Additive_Manufacturing_File_Format
+[Print3Dlogo]: https://raw.github.com/dbgarlisch/CaeUnsPrint3D/master/Print3D_icon.png  "Print3D Logo"
+[Print3Dwiki]: http://Print3D.wikispaces.com/
+[Print3Dwikipedia]: http://en.wikipedia.org/wiki/Additive_Manufacturing_File_Format
 [SDKdocs]: http://www.pointwise.com/plugins
 [SDKdownload]: http://www.pointwise.com/plugins/#sdk_downloads
