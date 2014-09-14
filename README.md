@@ -18,6 +18,7 @@ To build the Print3D plugin you must integrate this source code into your local 
 * Configure and validate the SDK following the [SDK's instructions][SDKdocs].
 * Create an Print3D plugin project using the mkplugin script: `mkplugin -uns -cpp Print3D`
 * Replace the project's generated files with the files from this repository.
+* This plugin uses the Configurable Math Library. You can download it from the [CML website][CMLwebsite].
 
 
 ## Disclaimer
@@ -41,3 +42,4 @@ POINTWISE.
 [Print3Dblog]: http://blog.pointwise.com/2012/03/12/printing-grids-in-3d/
 [SDKdocs]: http://www.pointwise.com/plugins
 [SDKdownload]: http://www.pointwise.com/plugins/#sdk_downloads
+[CMLwebsite]: http://cmldev.net/
